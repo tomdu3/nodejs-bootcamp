@@ -16,8 +16,16 @@ app.get('/', (req, resp) => {
     console.log(__dirname);
 });
 
+app.post('/', (req, res) => {
+    var num1 = Number(req.body.number1);
+    var num2 = req.body.number2;
+    var result = num1 + num2;
+    console.log(result);
+    res.send('Your result is: ' + result);
+})
 // app.listen(3000); - we need to add the callback function
 
 app.listen(3000, function() {
     console.log('Server is running on port 3000');
 });
+
