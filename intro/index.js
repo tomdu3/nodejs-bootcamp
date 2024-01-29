@@ -17,8 +17,8 @@ app.get('/', (req, resp) => {
 });
 
 app.post('/', (req, res) => {
-    var num1 = Number(req.body.number1);
-    var num2 = req.body.number2;
+    var num1 = Number(req.body.n1);
+    var num2 = Number(req.body.n2);
     var result = num1 + num2;
     console.log(result);
     res.send('Your result is: ' + result);
